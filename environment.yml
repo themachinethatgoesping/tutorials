@@ -1,0 +1,12 @@
+
+name: ping-environment
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - matplotlib
+  - ipympl
+  - pip
+  - pip:
+    - themachinethatgoesping
