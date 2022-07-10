@@ -46,7 +46,7 @@ ipympl==0.9.1
     # via
     #   -r requirements.in
     #   themachinethatgoesping
-ipython==8.4.0
+ipython
     # via
     #   ipykernel
     #   ipympl
