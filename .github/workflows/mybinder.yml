@@ -36,4 +36,5 @@ jobs:
       with:
         DOCKER_USERNAME: themachinethatgoesping
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        MYBINDERORG_CACHE: true
+        BINDER_CACHE: true
+        PUBLIC_REGISTRY_CHECK: true
