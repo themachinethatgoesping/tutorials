@@ -14,7 +14,7 @@ jobs:
       run: pytest --nbmake **/*ipynb
 
   build:
-    depends: test
+    needs: test
     runs-on: ubuntu-latest
     steps:
 
