@@ -1,0 +1,6 @@
+themachinethatgoesping
+numpy
+matplotlib
+ipympl
+pytest
+nbmake

@@ -1,9 +1,20 @@
 #src: https://discourse.jupyter.org/t/how-to-reduce-mybinder-org-repository-startup-time/4956/2
 
+
 name: Build Notebook Container
 on: [push] # You may want to trigger this Action on other things than a push.
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "install project"
+      run: pip install -r test_requirements.txt
+
+    - name: "run tests"
+      run: pytest --nbmake **/*ipynb
+
   build:
+    depends: test
     runs-on: ubuntu-latest
     steps:
 
