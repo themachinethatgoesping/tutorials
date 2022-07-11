@@ -7,6 +7,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+        
+    - name: checkout main repository
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+        lfs: true
+
     - name: "install project"
       run: pip install -r test_requirements.txt
 
