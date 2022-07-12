@@ -37,5 +37,4 @@ jobs:
         DOCKER_USERNAME: themachinethatgoesping
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         MYBINDERORG_TAG: ${{ github.event.ref }}
-        BINDER_CACHE: true
-        #PUBLIC_REGISTRY_CHECK: true
+        PUBLIC_REGISTRY_CHECK: true
