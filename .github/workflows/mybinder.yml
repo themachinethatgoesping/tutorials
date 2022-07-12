@@ -39,3 +39,11 @@ jobs:
         MYBINDERORG_TAG: ${{ github.event.ref }}
         PUBLIC_REGISTRY_CHECK: true
         NO_PUSH: true
+
+  trigger-binder-build:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: s-weigand/trigger-mybinder-build@vmaster
+        with:
+          target-repo: themachinethatgoesping/tutorials
