@@ -38,3 +38,4 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         MYBINDERORG_TAG: ${{ github.event.ref }}
         PUBLIC_REGISTRY_CHECK: true
+        NO_PUSH: true
