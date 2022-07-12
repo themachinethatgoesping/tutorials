@@ -44,6 +44,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: s-weigand/trigger-mybinder-build@vmaster
+      - uses: s-weigand/trigger-mybinder-build@master
         with:
           target-repo: themachinethatgoesping/tutorials
