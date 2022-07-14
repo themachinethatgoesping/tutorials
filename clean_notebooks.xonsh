@@ -10,4 +10,5 @@ for r,d,f in os.walk('.'):
 			ofi = r+'/'+file
 			jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace @(ofi)
 
+pytest --nbmake .
 
