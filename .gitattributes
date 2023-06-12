@@ -1,0 +1,2 @@
+*.all filter=lfs diff=lfs merge=lfs -text
+*.wcd filter=lfs diff=lfs merge=lfs -text
