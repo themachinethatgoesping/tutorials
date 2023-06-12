@@ -2,5 +2,6 @@ themachinethatgoesping
 numpy
 matplotlib
 ipympl
+ipyleaflet
 pytest
 nbmake
