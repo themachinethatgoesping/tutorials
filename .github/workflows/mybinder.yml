@@ -17,6 +17,9 @@ jobs:
         submodules: recursive
         lfs: true
 
+    - name: "install gdal"
+      run: sudo apt-get install -y python3-gdal
+
     - name: "install project"
       run: pip install -r requirements.txt
 
