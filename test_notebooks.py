@@ -21,10 +21,14 @@ for folder in del_folders:
 		# delete folder even if it is not empty
 		sh.rmtree(folder,ignore_errors=True)
 
-for r,d,f in os.walk('.'):
-  for file in f:
-    if file.endswith('.ipynb'):
-      notebooks.append(r + '/' + file)
+for r_,d_,f_ in os.walk('.'):
+	if not 'test_notebooks' in f_:
+		continue
+	
+	for r,d,f in os.walk(r_):
+		for file in f:
+			if file.endswith('.ipynb'):
+				notebooks.append(r + '/' + file)
 
 # delete jupyter_nbconvert.log if it exists
 if os.path.exists('jupyter_nbconvert.log'):
@@ -34,7 +38,7 @@ if os.path.exists('jupyter_nbconvert.log'):
 if os.path.exists('pytest.log'):
 	  os.remove('pytest.log')
 
-		# call pytest --nbmake on each notebook
+# call pytest --nbmake on each notebook
 # if pytest fails, exit and print error
 # if pytest succeeds, continue
 print('Running pytest on each notebook...')

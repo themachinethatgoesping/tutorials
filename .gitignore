@@ -4,6 +4,7 @@
 
 # ignore test_data.txt files
 **/test_data.txt
+**/index/**
 
 # other
 *.kate-swp
