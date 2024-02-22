@@ -29,6 +29,7 @@ for r_,d_,f_ in os.walk('.'):
 		for file in f:
 			if file.endswith('.ipynb'):
 				notebooks.append(r + '/' + file)
+				print(f'found {notebooks[-1]}')
 
 # delete jupyter_nbconvert.log if it exists
 if os.path.exists('jupyter_nbconvert.log'):
@@ -42,6 +43,7 @@ if os.path.exists('pytest.log'):
 # if pytest fails, exit and print error
 # if pytest succeeds, continue
 print('Running pytest on each notebook...')
+print(f'found {notebooks}')
 if sub.run(['pytest', '--nbmake', *notebooks]).returncode != 0:
 	exit()
 
