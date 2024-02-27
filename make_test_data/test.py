@@ -85,7 +85,7 @@ if False:
                 interfaces_.sort(key=lambda x: x.get_timestamp_first())
 
             # split the pings per (primary) file path
-            pings_per_file_path = pp.split_pings.by_file_path(fm.pings(), progress=True)
+            pings_per_file_path = pp.split_pings.by_file_path(fm.get_pings, progress=True)
 
             path_out_ = f"{path_out}/{prefix}"
             os.makedirs(path_out_,exist_ok=True)
