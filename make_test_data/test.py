@@ -48,7 +48,7 @@ for i in range(10):
     #open and index files
     index = index_functions.load_index_files(input_files)
     #index = {}
-    fm = kongsbergall.KongsbergAllFileHandler_mapped(input_files, cached_index = index, show_progress = False, init = False)
+    fm = kongsbergall.KongsbergAllFileHandler(input_files, cached_index = index, show_progress = False, init = False)
     dm = fm
     del fm
 
@@ -70,7 +70,7 @@ if False:
 
             #open and index files
             index = index_functions.load_index_files(input_files)
-            fm = kongsbergall.KongsbergAllFileHandler_mapped(input_files, cached_index = index)
+            fm = kongsbergall.KongsbergAllFileHandler(input_files, cached_index = index)
             index_functions.update_index_files(fm.get_cached_file_index())
 
             # sort primary file numbers per folder and then per first time stamp
