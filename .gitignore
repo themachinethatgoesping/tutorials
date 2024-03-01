@@ -6,7 +6,7 @@
 **/test_data.txt
 **/index/**
 demo-old/**
-unittest_data/**
+#unittest_data/**
 test_data/**
 open3d/**
 
