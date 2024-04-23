@@ -26,6 +26,8 @@ for r_,d_,f_ in os.walk('.'):
 		continue
 	
 	for r,d,f in os.walk(r_):
+		if 'no_testing' in f:
+			continue
 		for file in f:
 			if file.endswith('.ipynb'):
 				notebooks.append(r + '/' + file)
