@@ -1,7 +1,7 @@
 # themachinethatgoesping
 
 # basic python
-numpy
+numpy < 2.0
 tqdm
 xarray
 #pandas
@@ -22,3 +22,11 @@ utm
 jupyterlab
 nbmake
 pytest
+
+numba
+meson
+tqdm
+pybind11-stubgen
+pytest
+rasterio
+ipywidgets
