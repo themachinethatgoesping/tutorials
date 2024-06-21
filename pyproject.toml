@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "tutorial"
+version = "0.1.0"
+description = ""
+authors = ["Peter Urban <peter.urban@ugent.be>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.13"
+themachinethatgoesping = "^0.23.2"
+jupyterlab = ">=4.2.2"
+ipympl = ">=0.9.4"
+rasterio = ">=1.3.10"
+tqdm = ">=4.66.4"
+xarray = ">=2024.6.0"
+localtileserver = ">=0.10.3"
+ipyleaflet = ">=0.19.1"
+leafmap = ">=0.34.1"
+rioxarray = ">=0.15.5"
+utm = ">=0.7.0"
+pybind11-stubgen = ">=2.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
