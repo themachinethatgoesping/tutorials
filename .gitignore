@@ -2,10 +2,15 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
+# ignore specific test data for now
+unittest_data/kongsberg/e/**
+
 # ignore test_data.txt files
 **/test_data.txt
 **/index/**
 demo-old/**
+tutorials-old/**
+testing/**
 #unittest_data/**
 test_data/**
 open3d/**
@@ -217,3 +222,6 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks
 
 *.tmtgp.cache
+# pixi environments
+.pixi
+*.egg-info

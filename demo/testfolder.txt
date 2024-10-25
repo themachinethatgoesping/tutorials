@@ -1,3 +1,0 @@
-# add test folder path below
-#../unittest_data
-/home/data/turbeams/TURBEAMS_data_crunshing/campaigns/05_TURBEAMS_April_2023
