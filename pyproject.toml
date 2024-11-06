@@ -19,6 +19,7 @@ jupyterlab = "^4.2.5"
 ipympl = "^0.9.4"
 nbmake = "^1.5.4"
 ipyleaflet = "^0.19.2"
+numpy = "^1.26"
 
 
 [build-system]
