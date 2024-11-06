@@ -9,46 +9,57 @@ Tutorials and demos for themachinethatgoesping
 Use
 ---
 
-- You need your own testdata (Currently Kongsberg .all/.wcd files, more formats will be added in the future)
+- You need your own testdata (Currently Kongsberg .all/.wcd files or Simrad EK80, more formats will be added in the future)
 - If you don't have any, send me a message (peter.urban@ugent.be) 
 - We will add information on getting testdata in the future
 - Use the notebooks in the folder "demo". These are currently the only ones that will be kept up to date with other changes in ping
+- See also https://themachinethatgoesping.readthedocs.io/en/latest/first_steps/run_tutorials.html
 
 Prerequisites
 -------------
 
-- Windows, Linux or Mac: However, development is done on Linux, so this is the most tested
-- install python with pip (e.g. anaconda / miniforge)
-- install Ping: 
+- Windows, Linux or Mac: Development is done on Linux, so this is the most tested
+
+# Install (using miniforge & poetry)
+
+1. Install miniforge (or equivalent e.g. miniconda https://conda-forge.org/miniforge/)
+2. Create a new environment, with suitable python version and package manager package `poetry`:
 
 .. code-block:: shell
-    
-    pip install themachinethatgoesping
 
-- update Ping: 
+   $ conda create -n ping python=3.12
+   $ conda activate ping
+   $ pip install poetry
 
-.. code-block:: shell
-    
-    pip install --upgrade themachinethatgoesping
-
-- install requirements:
-
-.. code-block:: shell
-    
-    pip install -r requirements.txt
-
-Demo
-----
-
-- clone this repository
+3. clone this repository
 
 .. code-block:: shell
     
     git clone https://github.com/themachinethatgoesping/tutorials.git
     cd tutorials
-    cd demo
 
-- open jupyterlab in the demo folder
+3. Navigate to the directory where the `poetry.lock` file is located and run:
+
+.. code-block:: shell
+
+   # This will install the exact version specified in the provided poetry.lock file
+   poetry install
+
+
+4. If there are problems with installing `poetry`, when creating the environment, try instead:
+
+.. code-block:: shell
+
+   conda create -n ping python=3.12
+   conda activate ping
+   pip install poetry
+   poetry install
+
+
+Run demos
+----
+
+Open jupyterlab in the demo folder
 
 .. code-block:: shell
     
@@ -56,5 +67,5 @@ Demo
 
 Find ping interesting?
 ----------------------
-- Write me an email and we can have a chat: peter.urban@ugent.be
+- Drop me an email and we can have a chat: peter.urban@ugent.be
 
