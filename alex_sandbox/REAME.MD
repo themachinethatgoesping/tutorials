@@ -23,6 +23,16 @@ pip install poetry
 poetry install
 ```
 
+# Update
+
+If ping has been updated, update your ping environment with:
+
+```bash
+conda activate ping
+pip install --upgrade poetry
+poetry install
+```
+
 # Git
 
 This repository is a fork of the original repository. 
@@ -32,6 +42,7 @@ To update my fork with latest changes from the original repository, run:
 ```
 git fetch upstream
 git merge upstream/main
+git push --force
 ```
 
 or rebasing:
@@ -39,4 +50,5 @@ or rebasing:
 ```
 git fetch upstream
 git rebase upstream/main
+git push --force
 ```
