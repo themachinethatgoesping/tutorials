@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tutorial"
-version = "0.2.0"
+version = "0.26.0"
 description = ""
 authors = ["Peter Urban <peter.urban@ugent.be>"]
 readme = "README.md"
@@ -8,7 +8,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.10, <3.13"
-themachinethatgoesping = "0.25.1"
+themachinethatgoesping = "0.26.0"
 matplotlib = "3.9.0"
 jupyterlab = "^4.2.5"
 ipympl = "^0.9.4"
