@@ -22,3 +22,21 @@ conda activate ping
 pip install poetry
 poetry install
 ```
+
+# Git
+
+This repository is a fork of the original repository. 
+
+To update my fork with latest changes from the original repository, run:
+
+```
+git fetch upstream
+git merge upstream/main
+```
+
+or rebasing:
+    
+```
+git fetch upstream
+git rebase upstream/main
+```
