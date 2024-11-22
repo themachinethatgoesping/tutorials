@@ -15,6 +15,7 @@ ipympl = "^0.9.4"
 nbmake = "^1.5.4"
 ipyleaflet = "^0.19.2"
 numba = "^0.60" #setting this here makes sure that e.g. numpy version is set compatible by poetry
+poetry = "1.8.3"
 
 
 [build-system]
