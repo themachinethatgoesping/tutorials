@@ -42,13 +42,5 @@ To update my fork with latest changes from the original repository, run:
 ```
 git fetch upstream
 git merge upstream/main
-git push --force
-```
-
-or rebasing:
-    
-```
-git fetch upstream
-git rebase upstream/main
-git push --force
+git push origin
 ```
