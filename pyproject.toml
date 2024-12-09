@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tutorial"
-version = "0.27.0"
+version = "0.27.1"
 description = ""
 authors = ["Peter Urban <peter.urban@ugent.be>"]
 readme = "README.md"
@@ -8,13 +8,14 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.10, <3.13"
-themachinethatgoesping = "0.27"
+themachinethatgoesping = "0.27.1"
 matplotlib = "3.9.3"
 jupyterlab = "4.2.6"
 ipympl = "^0.9.4"
 nbmake = "^1.5.4"
 ipyleaflet = "^0.19.2"
 numba = "^0.60" #setting this here makes sure that e.g. numpy version is set compatible by poetry
+jupyterlab-execute-time = "^3.2.0"
 
 
 [build-system]
