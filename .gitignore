@@ -127,7 +127,7 @@ htmlcov/
 .nox/
 .coverage
 .coverage.*
-.cache
+.index
 nosetests.xml
 coverage.xml
 *.cover
@@ -221,7 +221,7 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks
 
-*.tmtgp.cache
+*.tmtgp.index
 # pixi environments
 .pixi
 *.egg-info
