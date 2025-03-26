@@ -3055,10 +3055,13 @@ groups = ["main"]
 files = [
     {file = "themachinethatgoesping-0.29.0-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:f4a005df045ae4a37e08d9f100e0198b2bbe3f635deb909f3c22182877b97749"},
     {file = "themachinethatgoesping-0.29.0-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:d5a47b3d02b07a3aae837f655f0ff0dae5c8696293742152e7da7bd032f5e9bc"},
+    {file = "themachinethatgoesping-0.29.0-cp311-cp311-win_amd64.whl", hash = "sha256:16352c032bf50d58be3b4b24718da7aa867348f104f2d63e4464157db69edfae"},
     {file = "themachinethatgoesping-0.29.0-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:6d689975f7911282d734f9254bb6b33b96d7ec9e8a81a1c749062015f5d91b69"},
     {file = "themachinethatgoesping-0.29.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:2e6962c0385955bca0406f027b805d3c5defe1ba6d920c3460c97ba863db7644"},
+    {file = "themachinethatgoesping-0.29.0-cp312-cp312-win_amd64.whl", hash = "sha256:ada3cff488d8148b3b2cdff7632525287420d8e00c0ef68d210c508e98dc115d"},
     {file = "themachinethatgoesping-0.29.0-cp313-cp313-macosx_14_0_arm64.whl", hash = "sha256:768c5c92751b02476be18f6ef693e16f5bc28139dbe8aafcf3ea97365617f262"},
     {file = "themachinethatgoesping-0.29.0-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:084e85f7511b13ec27500a250844cf5a29df8b5dedd0b73ff6aae9493fe5287f"},
+    {file = "themachinethatgoesping-0.29.0-cp313-cp313-win_amd64.whl", hash = "sha256:9123b4813ac99f4e4e36fdc43f99b1a42e7b700e54bfd61840571e29fe3d09c6"},
 ]
 
 [package.dependencies]

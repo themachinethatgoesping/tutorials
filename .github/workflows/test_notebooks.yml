@@ -1,15 +1,22 @@
 #src: https://discourse.jupyter.org/t/how-to-reduce-mybinder-org-repository-startup-time/4956/2
 
 
-name: Build Notebook Container
+name: Test notebooks
 on: [push] # You may want to trigger this Action on other things than a push.
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  test_notebooks:
+    name:  ${{matrix.os}} py${{matrix.python_version}}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ['windows-latest', 'ubuntu-latest', 'macos-latest']
+        python_version: ['3.11', '3.12', '3.13']
+
+    runs-on: ${{matrix.os}}
     steps:
     - uses: actions/setup-python@v3
       with:
-        python-version: '3.11'
+        python-version: ${{matrix.python_version}}
         
     - name: checkout main repository
       uses: actions/checkout@v4
@@ -17,16 +24,16 @@ jobs:
         submodules: recursive
         lfs: true
 
-    - name: "install gdal"
-      run: sudo apt-get install -y python3-gdal
+    - name: "install poetry"
+      run: pip install poetry
 
-    - name: "install project"
-      run: pip install -r requirements.txt
+    - name: "install dependencies (poetry)"
+      run: poetry install
 
     - name: "run tests"
-      run: python test_notebooks.py
+      run: poetry run python test_notebooks.py
   build:
-    needs: test
+    needs: test_notebooks
     runs-on: ubuntu-latest
     steps:
 
