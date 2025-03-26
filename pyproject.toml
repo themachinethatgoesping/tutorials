@@ -1,23 +1,30 @@
+[project]
+name = "tutorials"
+version = "0.29.0"
+description = "Tutorial notebooks for themachinethatgoesping"
+authors = [
+    {name = "Peter Urban",email = "peter.urban@ugent.be"}
+]
+license = {text = "CC0-1.0"}
+readme = "README.rst"
+requires-python = ">=3.11, <3.14"
+dependencies = [
+    "themachinethatgoesping (==0.29.0)",
+    "ipympl (>=0.9.7,<0.10.0)",
+    "nbmake (>=1.5.5,<2.0.0)",
+    "pytest (>=8.3.5,<9.0.0)",
+    "jupyterlab-execute-time (>=3.2.0,<4.0.0)",
+    "ipyleaflet (>=0.19.2,<0.20.0)"
+]
+
 [tool.poetry]
-name = "tutorial"
-version = "0.28.0"
-description = ""
-authors = ["Peter Urban <peter.urban@ugent.be>"]
-readme = "README.md"
 package-mode = false
 
-[tool.poetry.dependencies]
-python = ">=3.10, <3.13"
-themachinethatgoesping = "0.28.1"
-matplotlib = "3.10.0"
-jupyterlab = "4.3.4"
-ipympl = "0.9.6"
-nbmake = "^1.5.4"
-ipyleaflet = "^0.19.2"
-numba = "^0.60" #setting this here makes sure that e.g. numpy version is set compatible by poetry
-jupyterlab-execute-time = "^3.2.0"
-
-
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+

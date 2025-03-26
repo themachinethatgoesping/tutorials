@@ -44,19 +44,19 @@ if os.path.exists('pytest.log'):
 # call pytest --nbmake on each notebook
 # if pytest fails, exit and print error
 # if pytest succeeds, continue
-print('Running pytest on each notebook...')
-print(f'found {notebooks}')
-for notebook in notebooks:
-	if sub.run(['pytest', '--nbmake', notebook]).returncode != 0:
-		exit()
-
-# # call pytest --nbmake on each notebook
-# # if pytest fails, exit and print error
-# # if pytest succeeds, continue
 # print('Running pytest on each notebook...')
 # print(f'found {notebooks}')
-# if sub.run(['pytest', '--nbmake', *notebooks]).returncode != 0:
-# 	exit()
+# for notebook in notebooks:
+# 	if sub.run(['pytest', '--nbmake', notebook]).returncode != 0:
+# 		exit()
+
+# call pytest --nbmake on each notebook
+# if pytest fails, exit and print error
+# if pytest succeeds, continue
+print('Running pytest on each notebook...')
+print(f'found {notebooks}')
+if sub.run(['pytest', '--nbmake', *notebooks]).returncode != 0:
+	exit()
 
 
 # call jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace on each notebook
