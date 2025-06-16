@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ['windows-latest', 'ubuntu-latest', 'macos-latest']
+        os: ['windows-2025', 'ubuntu-latest', 'macos-latest']
         python_version: ['3.11', '3.12', '3.13']
 
     runs-on: ${{matrix.os}}

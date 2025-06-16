@@ -1,6 +1,6 @@
 [project]
 name = "tutorials"
-version = "0.29.0"
+version = "0.30.1"
 description = "Tutorial notebooks for themachinethatgoesping"
 authors = [
     {name = "Peter Urban",email = "peter.urban@ugent.be"}
@@ -9,7 +9,7 @@ license = {text = "CC0-1.0"}
 readme = "README.rst"
 requires-python = ">=3.11, <3.14"
 dependencies = [
-    "themachinethatgoesping (==0.29.0)",
+    "themachinethatgoesping (==0.30.1)",
     "ipympl (>=0.9.7,<0.10.0)",
     "nbmake (>=1.5.5,<2.0.0)",
     "pytest (>=8.3.5,<9.0.0)",
@@ -25,6 +25,6 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pixi.project]
-channels = ["conda-forge"]
-platforms = ["linux-64"]
+channels = ["conda-forge", "themachinethatgoesping"]
+platforms = ["linux-64", "win-64"]
 
