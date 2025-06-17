@@ -4,12 +4,13 @@ channels:
   - themachinethatgoesping
 dependencies:
   - python = 3.13
-  - themachinethatgoesping>=0.30.2.dev1,<0.31
+  - themachinethatgoesping>=0.30.2,<0.31
   - jupyterlab>=4.4.3,<5
   - matplotlib>=3.10.3,<4
   - ipympl>=0.9.7,<0.10
   - ipyleaflet>=0.20.0,<0.21
   - pytest>=8.4.0,<9
   - nbmake>=1.5.5,<2
+  - h5netcdf
   - pip:
         - jupyterlab-execute-time>=3.2.0,<4
