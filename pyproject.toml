@@ -1,13 +1,13 @@
 [project]
 name = "tutorials"
-version = "0.30.2"
+version = "0.32.0"
 description = "Tutorial notebooks for themachinethatgoesping"
 authors = [
     {name = "Peter Urban",email = "peter.urban@ugent.be"}
 ]
 license = {text = "CC0-1.0"}
 readme = "README.rst"
-requires-python = ">=3.11, <3.14"
+requires-python = ">=3.11, <3.15"
 dependencies = [ "jupyterlab-execute-time>=3.2.0,<4"]
 
 [tool.poetry]
@@ -27,14 +27,14 @@ platforms = [ "linux-64", "osx-arm64", "win-64"]
 #platforms = ["linux-64"]
 
 [tool.pixi.dependencies]
-themachinethatgoesping = ">=0.30.2,<0.31"
-jupyterlab = ">=4.4.3,<5"
-matplotlib = ">=3.10.3,<4"
-ipympl = ">=0.9.7,<0.10"
+themachinethatgoesping = ">=0.32.0.dev,<0.33"
+jupyterlab = ">=4.5.0,<5"
+matplotlib = ">=3.10.8,<4"
+ipympl = ">=0.9.8,<0.10"
 ipyleaflet = ">=0.20.0,<0.21"
-pytest = ">=8.4.0,<9"
+pytest = ">=9.0.2,<10"
 nbmake = ">=1.5.5,<2"
-netcdf4 = ">=1.7.2,<2"
+netcdf4 = ">=1.7.3,<2"
 openpyxl = ">=3.1.5,<4"
-xarray = ">=2025.6.1,<2026"
+xarray = ">=2025.12.0,<2026"
 
