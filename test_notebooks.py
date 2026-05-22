@@ -9,37 +9,56 @@ from tqdm.auto import tqdm
 
 notebooks = []
 
+
+def is_testing_disabled(path):
+	current = os.path.abspath(path)
+	while True:
+		if os.path.exists(os.path.join(current, 'no_testing')):
+			return True
+		parent = os.path.dirname(current)
+		if parent == current:
+			return False
+		current = parent
+
 # delete all '.ipynb_checkpoints' folders
 del_folders = []
-for r,d,f in os.walk('.'):
-	for folder in d:
+
+for root, dirs, files in os.walk('.'):
+	for folder in dirs:
 		if folder.endswith('.ipynb_checkpoints'):
-			del_folders.append(r + '/' + folder)
+			del_folders.append(os.path.join(root, folder))
 
 for folder in del_folders:
 	if os.path.exists(folder):
 		# delete folder even if it is not empty
-		sh.rmtree(folder,ignore_errors=True)
+		sh.rmtree(folder, ignore_errors=True)
 
-for r_,d_,f_ in os.walk('.'):
-	if not 'test_notebooks' in f_:
+for root, dirs, files in os.walk('.'):
+	if not any(name.startswith('test_notebooks') for name in files):
 		continue
-	
-	for r,d,f in os.walk(r_):
-		if 'no_testing' in f:
+	if is_testing_disabled(root):
+		dirs[:] = []
+		continue
+
+	for current_root, current_dirs, current_files in os.walk(root):
+		if is_testing_disabled(current_root):
+			current_dirs[:] = []
 			continue
-		for file in f:
+		current_dirs[:] = [folder for folder in current_dirs if not folder.startswith('.')]
+		if 'no_testing' in current_files:
+			continue
+		for file in current_files:
 			if file.endswith('.ipynb'):
-				notebooks.append(r + '/' + file)
+				notebooks.append(os.path.join(current_root, file))
 				print(f'found {notebooks[-1]}')
 
 # delete jupyter_nbconvert.log if it exists
 if os.path.exists('jupyter_nbconvert.log'):
-  os.remove('jupyter_nbconvert.log')
+	os.remove('jupyter_nbconvert.log')
 
 # delete pytest.log if it exists
 if os.path.exists('pytest.log'):
-	  os.remove('pytest.log')
+	os.remove('pytest.log')
 
 # call pytest --nbmake on each notebook
 # if pytest fails, exit and print error
